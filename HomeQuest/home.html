@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Profile Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Home Page</h1>
+    <div class="container">
+        <h2>Create Your Profile</h2>
+        <form id="profileForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <textarea id="aboutMe" placeholder="About Me" rows="4"></textarea>
+            <button type="button" onclick="saveProfile()">Save Profile</button>
+        </form>
+    </div>
+
+    <script>
+        function saveProfile() {
+            const fullName = document.getElementById('fullName').value;
+            const username = document.getElementById('username').value;
+
+            if (fullName && username) {
+                // Simulate saving the profile (this can be linked to backend later)
+                alert(`Profile saved!\nName: ${fullName}\nUsername: ${username}`);
+                // Navigate to Rent-Sale page
+                window.location.href = 'rent-sale.html';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+</html>
